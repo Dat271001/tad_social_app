@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "855934216910",
+    "project_id": "tad-social-media-app",
+    "storage_bucket": "tad-social-media-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855934216910:android:5421383ac10f8ea146be9f",
+        "android_client_info": {
+          "package_name": "com.example.tad_social_media_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo_2ie8y0DuU_ko8xg0EZBP2wg4mCKSJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
