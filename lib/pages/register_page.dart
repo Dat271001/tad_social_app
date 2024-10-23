@@ -58,89 +58,91 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //logo
-            Icon(
-              Icons.person,
-              size: 80,
-              color: Theme.of(context).colorScheme.inversePrimary,
-            ),
-            const SizedBox(height: 25),
-            //app name
-            Text(
-              "T A D",
-              style: TextStyle(fontSize: 20),
-            ),
-            MyTextfield(
-              hintText: "Username",
-              obscureText:false,
-              controller: usernameController,
-            ),
-            const SizedBox(height: 25),
-            //email textfield
-            MyTextfield(
-              hintText: "Email",
-              obscureText:false,
-              controller: emailController,
-            ),
-            const SizedBox(height: 25),
-            //password textfield
-            MyTextfield(
-              hintText: "Password",
-              obscureText:true,
-              controller: passwordController,
-            ),
-            const SizedBox(height: 25),
-            MyTextfield(
-              hintText: "Confirm Password",
-              obscureText:true,
-              controller: confirmPasswordController,
-            ),
-            const SizedBox(height: 25),
-            //forgot password
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  "Forgot password",
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 25),
-            //sign in button
-            MyButton(
-              text: "Register",
-              onTap: register,
-            ),
-            const SizedBox(height: 25),
-            //don't have an account?
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Already have an account ?",
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: widget.onTap,
-                  child: const Text(
-                    " Login Here",
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              //logo
+              Icon(
+                Icons.person,
+                size: 80,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              const SizedBox(height: 25),
+              //app name
+              Text(
+                "T A D",
+                style: TextStyle(fontSize: 20),
+              ),
+              MyTextfield(
+                hintText: "Username",
+                obscureText:false,
+                controller: usernameController,
+              ),
+              const SizedBox(height: 25),
+              //email textfield
+              MyTextfield(
+                hintText: "Email",
+                obscureText:false,
+                controller: emailController,
+              ),
+              const SizedBox(height: 25),
+              //password textfield
+              MyTextfield(
+                hintText: "Password",
+                obscureText:true,
+                controller: passwordController,
+              ),
+              const SizedBox(height: 25),
+              MyTextfield(
+                hintText: "Confirm Password",
+                obscureText:true,
+                controller: confirmPasswordController,
+              ),
+              const SizedBox(height: 25),
+              //forgot password
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Forgot password",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+              const SizedBox(height: 25),
+              //sign in button
+              MyButton(
+                text: "Register",
+                onTap: register,
+              ),
+              const SizedBox(height: 25),
+              //don't have an account?
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Already have an account ?",
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: widget.onTap,
+                    child: const Text(
+                      " Login Here",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
